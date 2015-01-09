@@ -21,12 +21,12 @@ task 'build', 'Compile all CoffeeScript files', ->
   exec "#{coffee} -c --no-header -o #{libDir} #{srcDir}", (err, stdout, stderr) ->
     if err
       util.log err
-      return
+      process.exit 1 # abort npm packaging
     util.log "Compiled CoffeeScript."
 
 task 'test', 'Run the Jasmine tests', ->
   exec "#{jasmine} --color --coffee --verbose spec/", (err, stdout, stderr) ->
     if err
-      util.log err
-      return
+      util.log "Testing Failed - \n#{stdout}"
+      process.exit 1 # abort npm packaging
     util.log("Test Results - \n#{stdout}")
