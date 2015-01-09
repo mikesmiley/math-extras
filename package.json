@@ -2,11 +2,11 @@
   "name": "math-extras",
   "version": "0.1.2",
   "author": "Mike Smiley",
-  "email": "smiledawgg@me.com",
+  "email": "mikesmiley@me.com",
   "main": "./lib",
   "repository": {
     "type": "git",
-    "url": "git://github.com/smiledawgg/math-extras.git"
+    "url": "git://github.com/mikesmiley/math-extras.git"
   },
   "scripts": {
     "doc": "./node_modules/.bin/docco src/math-extras.coffee",
