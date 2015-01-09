@@ -1,0 +1,24 @@
+{
+  "name": "math-extras",
+  "version": "0.1.0",
+  "email": "smiledawgg@me.com",
+  "main": "./lib",
+  "scripts": {
+    "codo": "./node_modules/.bin/codo",
+    "prepublish": "cake build",
+    "test": "./node_modules/.bin/jasmine-node --coffee --verbose spec/"
+  },
+  "devDependencies": {
+    "codo": "*",
+    "coffee-script": "1.7.1",
+    "jasmine-node": "^1.14.5"
+  },
+  "dependencies": {
+  },
+  "keywords": [
+    "math",
+    "radians",
+    "log10"
+  ],
+  "license": "MIT"
+}
