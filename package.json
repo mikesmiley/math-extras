@@ -7,8 +7,8 @@
   "repository": "mikesmiley/math-extras.git",
   "scripts": {
     "doc": "./node_modules/.bin/docco src/math-extras.coffee",
-    "prepublish": "cake build",
-    "test": "./node_modules/.bin/jasmine-node --coffee --verbose spec/"
+    "prepublish": "cake build test",
+    "test": "cake test"
   },
   "devDependencies": {
     "docco": "*",

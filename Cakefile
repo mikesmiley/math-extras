@@ -6,6 +6,7 @@ util = require 'util'
 srcDir = 'src'
 libDir = 'lib'
 coffee = path.normalize("./node_modules/.bin/coffee")
+jasmine = path.normalize("./node_modules/.bin/jasmine-node")
 
 task 'watch', 'Watch source files and build changes', ->
   watch = spawn coffee, ['-cw', '--no-header', '-o', libDir, srcDir]
@@ -18,6 +19,14 @@ task 'build', 'Compile all CoffeeScript files', ->
 
   # run coffee-script compile
   exec "#{coffee} -c --no-header -o #{libDir} #{srcDir}", (err, stdout, stderr) ->
-    util.log(err) if err
-    util.log "Compiled CoffeeScript"
-    util.log "done."
+    if err
+      util.log err
+      return
+    util.log "Compiled CoffeeScript."
+
+task 'test', 'Run the Jasmine tests', ->
+  exec "#{jasmine} --color --coffee --verbose spec/", (err, stdout, stderr) ->
+    if err
+      util.log err
+      return
+    util.log("Test Results - \n#{stdout}")
