@@ -6,8 +6,8 @@
   "main": "./lib",
   "repository": "mikesmiley/math-extras.git",
   "scripts": {
-    "doc": "./node_modules/.bin/docco src/math-extras.coffee",
-    "prepublish": "cake build test",
+    "doc": "cake doc",
+    "prepublish": "cake build test doc",
     "test": "cake test"
   },
   "devDependencies": {

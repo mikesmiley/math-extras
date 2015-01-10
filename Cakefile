@@ -7,6 +7,7 @@ srcDir = 'src'
 libDir = 'lib'
 coffee = path.normalize("./node_modules/.bin/coffee")
 jasmine = path.normalize("./node_modules/.bin/jasmine-node")
+docco = path.normalize("./node_modules/.bin/docco")
 
 task 'watch', 'Watch source files and build changes', ->
   watch = spawn coffee, ['-cw', '--no-header', '-o', libDir, srcDir]
@@ -30,3 +31,10 @@ task 'test', 'Run the Jasmine tests', ->
       util.log "Testing Failed - \n#{stdout}"
       process.exit 1 # abort npm packaging
     util.log("Test Results - \n#{stdout}")
+
+task 'doc', 'Generate documentation', ->
+  exec "#{docco} src/*", (err, stdout, stderr) ->
+    if err
+      util.log "Docco Failed - \n#{stdout}"
+      process.exit 1 # abort npm packaging
+    util.log("Docco generated documentation - \n#{stdout}")
