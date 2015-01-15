@@ -1,10 +1,10 @@
 {
   "name": "math-extras",
   "version": "0.1.9",
-  "author": "Mike Smiley",
-  "email": "mikesmiley@me.com",
+  "author": "Mike Smiley <mikesmiley@me.com>",
+  "url": "https://github.com/msmiley/math-extras",
   "main": "./lib",
-  "repository": "mikesmiley/math-extras.git",
+  "repository": "msmiley/math-extras.git",
   "scripts": {
     "doc": "cake doc",
     "prepublish": "cake build test doc",
