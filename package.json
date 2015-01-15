@@ -1,6 +1,6 @@
 {
   "name": "math-extras",
-  "version": "0.1.9",
+  "version": "0.1.10",
   "author": "Mike Smiley <mikesmiley@me.com>",
   "url": "https://github.com/msmiley/math-extras",
   "main": "./lib",
