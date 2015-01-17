@@ -6,8 +6,8 @@
   "main": "./lib",
   "repository": "msmiley/math-extras.git",
   "scripts": {
-    "doc": "cake doc",
-    "prepublish": "cake build test doc",
+    "docs": "cake docs",
+    "prepublish": "cake build test docs",
     "test": "cake test"
   },
   "devDependencies": {
